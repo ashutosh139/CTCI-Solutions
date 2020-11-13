@@ -1,0 +1,14 @@
+//Brute Force-Run two loops and compare each char with other char and if at any time they are same return false mean string not have all unique char-Time Complexity O(n*n)
+      bool isALLUniqChar(string s) {
+        int unique_char=0;
+        for(int i=0;i<s.length();i++){
+            for(int j=i+1;j<s.length();j++){
+                if(s[i]==s[j])
+                    return false;
+            }
+        }
+        return true;
+    }
+int main() {
+    std::cout<<isALLUniqChar("aa");
+}
